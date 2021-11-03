@@ -50,6 +50,9 @@
     "tsc-watch": "tsc --watch",
     "watch": "concurrently --kill-others \"npm:*-watch\""
   },
+  "publishConfig": {
+    "registry": "https://anyvision.jfrog.io/anyvision/api/npm/npm/"
+  },
   "dependencies": {
     "@xmldom/xmldom": "^0.7.2",
     "debug": "^4.3.1",
