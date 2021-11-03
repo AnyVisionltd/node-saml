@@ -632,7 +632,7 @@ class SAML {
       "<noscript>",
       "<p><strong>Note:</strong> Since your browser does not support JavaScript, you must press the button below once to proceed.</p>",
       "</noscript>",
-      '<form method="post" action="' + encodeURI(this.options.entryPoint) + '">',
+      '<form method="post" action="' + this.options.entryPoint + '">',
       formInputs,
       '<input type="submit" value="Submit" />',
       "</form>",
