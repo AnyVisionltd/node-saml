@@ -10,10 +10,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/node-saml/node-saml.git"
+    "url": "https://github.com/node-saml/node-saml.git"
   },
   "license": "MIT",
-  "author": "Henri Bergius <henri.bergius@iki.fi> (http://bergie.iki.fi)",
+  "author": {
+    "name": "Henri Bergius",
+    "email": "henri.bergius@iki.fi",
+    "url": "http://bergie.iki.fi"
+  },
   "contributors": [
     "Michael Bosworth",
     "Herbert Vojčík",
