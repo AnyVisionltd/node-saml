@@ -1,5 +1,5 @@
 pipeline {
-    agent {
+    agent { 
         label 'cicd'
     }
     options {
@@ -7,8 +7,8 @@ pipeline {
         disableConcurrentBuilds()
         ansiColor('xterm')
         timeout(time: 3, unit: 'HOURS')
-        buildDiscarder(logRotator(numToKeepStr:'50'))
-    }
+        buildDiscarder(logRotator(numToKeepStr:'50'))        
+    }    
     libraries {
         lib('pipeline-library')
     }
@@ -19,7 +19,7 @@ pipeline {
     }
     stages {
         stage('Initialize') {
-            when {
+            when { 
                 not { changelog '.*Committed by Jenkins.*' }
             }
             steps {
