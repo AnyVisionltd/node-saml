@@ -1,5 +1,5 @@
 {
-  "name": "@oosto/node-saml",
+  "name": "@anyvision/node-saml",
   "version": "3.0.0",
   "description": "SAML 2.0 implementation for Node.js",
   "keywords": [
@@ -10,14 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-saml/node-saml.git"
+    "url": "git+https://github.com/node-saml/node-saml.git"
   },
   "license": "MIT",
-  "author": {
-    "name": "Henri Bergius",
-    "email": "henri.bergius@iki.fi",
-    "url": "http://bergie.iki.fi"
-  },
+  "author": "Henri Bergius <henri.bergius@iki.fi> (http://bergie.iki.fi)",
   "contributors": [
     "Michael Bosworth",
     "Herbert Vojčík",
