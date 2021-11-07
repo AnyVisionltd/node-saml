@@ -1,6 +1,6 @@
 {
   "name": "@anyvision/node-saml",
-  "version": "3.0.1-beta.0",
+  "version": "3.0.0",
   "description": "SAML 2.0 implementation for Node.js",
   "keywords": [
     "saml",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/node-saml/node-saml.git"
+    "url": "https://github.com/AnyVisionltd/node-saml.git"
   },
   "license": "MIT",
   "author": {
@@ -97,9 +97,9 @@
     "node": ">= 12"
   },
   "bugs": {
-    "url": "https://github.com/node-saml/node-saml/issues"
+    "url": "https://github.com/AnyVisionltd/node-saml/issues"
   },
-  "homepage": "https://github.com/node-saml/node-saml#readme",
+  "homepage": "https://github.com/AnyVisionltd/node-saml#readme",
   "directories": {
     "doc": "docs",
     "lib": "lib",
