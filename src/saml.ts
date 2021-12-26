@@ -478,6 +478,7 @@ class SAML {
 
     const base64 = buffer.toString("base64");
     let target = new URL(this.options.entryPoint);
+    let targetWithDecodedParameters = `${target.origin}${target.pathname}`
 
     if (operation === "logout") {
       if (this.options.logoutUrl) {
@@ -495,7 +496,7 @@ class SAML {
           SAMLResponse: base64,
         };
     Object.keys(additionalParameters).forEach((k) => {
-      samlMessage[k] = additionalParameters[k];
+      samlMessage[k] = decodeURIComponent(additionalParameters[k] as string);
     });
     if (isValidSamlSigningOptions(this.options)) {
       if (!this.options.entryPoint) {
@@ -505,11 +506,12 @@ class SAML {
       // sets .SigAlg and .Signature
       this.signRequest(samlMessage);
     }
-    Object.keys(samlMessage).forEach((k) => {
-      target.searchParams.set(k, samlMessage[k] as string);
+    Object.keys(samlMessage).forEach((k, index) => {
+      const sign = index === 0 ? '?' : '&'
+      targetWithDecodedParameters += `${sign}${k}=${samlMessage[k]}`
     });
 
-    return target.toString();
+    return targetWithDecodedParameters
   }
 
   _getAdditionalParams(
