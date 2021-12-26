@@ -496,7 +496,7 @@ class SAML {
           SAMLResponse: base64,
         };
     Object.keys(additionalParameters).forEach((k) => {
-      samlMessage[k] = encodeURIComponent(additionalParameters[k] as string);
+      samlMessage[k] = decodeURIComponent(additionalParameters[k] as string);
     });
     if (isValidSamlSigningOptions(this.options)) {
       if (!this.options.entryPoint) {
